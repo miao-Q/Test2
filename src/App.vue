@@ -16,15 +16,15 @@ export default {
   },
   data(){
     return{
-      age :35，
-      data = ''
+      age :35,
+      data : ''
     }
     
 
   },
   mounted(){
-    let url ="https://blog.csdn.net/qq_41506821/article/details/86286313?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1"
-    jsonp(url,(err,res)=>{
+    let url ="/activity/servicetime";
+     jsonp(url,(err,res)=>{
       let result = res;
       this.data = result; 
     })
