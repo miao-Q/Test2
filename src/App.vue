@@ -7,12 +7,33 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import jsonp from 'jsonp'
+// import axios from 'axios'
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data(){
+    return{
+      age :35，
+      data = ''
+    }
+    
+
+  },
+  mounted(){
+    let url ="https://blog.csdn.net/qq_41506821/article/details/86286313?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1"
+    jsonp(url,(err,res)=>{
+      let result = res;
+      this.data = result; 
+    })
   }
+    // ,mounted(){
+    //   axios.get(url).then(()=>{
+        
+    //   })
+    // }
 }
 </script>
 
