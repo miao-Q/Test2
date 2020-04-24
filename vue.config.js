@@ -3,13 +3,19 @@ module.exports ={
         host:'localhost',
         port:8080,
         proxy:{
-            '/activity':{
-                target:"https://www.imooc.com/",
+            '/api':{       //target下所有接口都可被api代理
+                target:"https://www.imooc.com",
                 changeOrigin:true,
                 pathRewrite:{
-                    '/activity':  '/activity'
+                    '/api':  ''
                 }
             }
+            // '/activity':{      //拦截到该接口，进行代理
+            //     target:"https://www.imooc.com/",
+            //     changeOrigin:true,
+            //     pathRewrite:{
+            //         '/activity':  '/activity'
+            //     }
         }
     }
 }
