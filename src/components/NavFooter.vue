@@ -1,5 +1,5 @@
 <template>
-    <div><div>
+    <div>nav-fooder</div>
 </template>
 <script>
 export default {
